@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Harris Asia
-image: /img/104648.jpg
+image: /img/giphy.gif
 heading: Once there's fashion
 subheading: since1913
 mainpitch:
