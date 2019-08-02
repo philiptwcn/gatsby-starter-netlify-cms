@@ -4,9 +4,9 @@ jobs:
     working_directory: ~/test_harris-asia
     # The primary container is an instance of the first image listed. The job's commands run in this container.
     docker:
-      - image: circleci/node:8.9.3-browsers
+      - image: circleci/node:8.9.3
     # The secondary container is an instance of the second listed image which is run in a common network where ports exposed on the primary container are available on localhost.
-      - image: mongo:3.5.13-browsers
+      - image: mongo:3.5.13
     steps:
       - checkout
       - run:
@@ -16,8 +16,8 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
   test:
     docker:
-      - image: circleci/node:8.9.3-browsers
-      - image: mongo:3.5.13-browsers
+      - image: circleci/node:8.9.3
+      - image: mongo:3.5.13
     steps:
       - checkout
       - run:
